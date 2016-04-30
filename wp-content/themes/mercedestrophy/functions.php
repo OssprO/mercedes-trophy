@@ -22,17 +22,7 @@
 	}
 	add_action( 'after_setup_theme', 'mercedestrophy_setup' );
 
-	// Scripts & Styles (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
-	/**
- 	* Enqueue mercedestrophy scripts
- 	* @return void
- 	*/
-	// Load jQuery
-	if ( !is_admin() ) {
-	   wp_deregister_script('jquery');
-	   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"), false);
-	   wp_enqueue_script('jquery');
-	}
+	
 
 	    
 	function mercedestrophy_enqueue_scripts() {
@@ -40,6 +30,19 @@
 	    wp_enqueue_script( 'jquery' );
 	    wp_enqueue_script( 'default-scripts', get_template_directory_uri() . '/static/js/footer.js', array(), '1.0', true );
 	    if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
+
+
+	    // Scripts & Styles (based on twentythirteen: http://make.wordpress.org/core/tag/twentythirteen/)
+		/**
+	 	* Enqueue mercedestrophy scripts
+	 	* @return void
+	 	*/
+		// Load jQuery
+		if ( !is_admin() ) {
+		   //wp_deregister_script('jquery');
+		   wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"), false);
+		   wp_enqueue_script('jquery');
+		}
 	}
 	add_action( 'wp_enqueue_scripts', 'mercedestrophy_enqueue_scripts' );
 
@@ -179,4 +182,15 @@ function mercedestrophy_handle_upload_prefilter($file)
         return $file; 
 }
 */
+
+
+	function hide_admin_bar_from_front_end(){
+	  if (is_blog_admin()) {
+	    return true;
+	  }
+	  return false;
+	}
+	add_filter( 'show_admin_bar', 'hide_admin_bar_from_front_end' );
+
+
 ?>

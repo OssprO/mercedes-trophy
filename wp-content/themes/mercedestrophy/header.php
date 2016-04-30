@@ -122,14 +122,110 @@
 <body <?php body_class(); ?>>
 
 	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
-	<div id="wrapper">
-
+	<div id="wrapper" class="container">
+		
 		<header id="header" role="banner">
+			<!--
 			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<div class="description"><?php bloginfo( 'description' ); ?></div>
-		</header>
+			-->
+			
+			<!--<div class="description"><?php bloginfo( 'description' ); ?></div>-->
+			
+			<!--
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Brand</a>
+					</div>
 
+					<div class="collapse navbar-collapse" id="">
+						<div class="row">
+							<div class="col-xs-14 col-lg-6 col-xs-offset-1">
+								LOGO
+							</div>
+							<div class="col-xs-14 col-lg-6 text-right">
+								MENU
+							</div>
+						</div>
+						
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+							<li><a href="#">Link</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li role="separator" class="divider"></li>
+									<li><a href="#">Separated link</a></li>
+									<li role="separator" class="divider"></li>
+									<li><a href="#">One more separated link</a></li>
+								</ul>
+							</li>
+						</ul>
+						
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#">Link</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Action</a></li>
+									<li><a href="#">Another action</a></li>
+									<li><a href="#">Something else here</a></li>
+									<li role="separator" class="divider"></li>
+									<li><a href="#">Separated link</a></li>
+								</ul>
+							</li>
+						</ul>
+						
+					</div>
+				</div>
+			</nav>
+			-->
+			
+			<nav class="navbar navbar-default" role="navigation">
+			    <div class="container-fluid">
+				    <div class="row">
+				        <div class="navbar-header col-xs-14 col-lg-6 col-xs-offset-1">
+					        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topmenu">
+					            <span class="sr-only">Toggle navigation</span>
+					            <span class="icon-bar">Inicio</span>
+					            <span class="icon-bar">Clubes 2016</span>
+					            <span class="icon-bar">Galerías</span>
+					        </button>
+					        <a rel="home" class="logo" href="#">
+					            <img src="<?php echo get_template_directory_uri(); ?>/images/mercedes-main-logo_55.png" alt="Mercedes Benz" class="img-responsive logo">
+					        </a>
+				        </div>
+				        <div class="navbar-collapse collapse text-center" id="topmenu">
+					        <ul class="nav">
+					            <li class="active col-xs-2"><a href="#">Inicio</a></li>
+					            <li class="col-xs-2"><a href="#s">Clubes 2016</a></li>
+					            <li class="col-xs-2"><a href="#section-bio">Galería</a></li>
+					        </ul>
+				        </div>  
+				    </div>
+			    </div>
+			</nav>
+
+		</header>
+		<!--
 		<nav id="nav" role="navigation">
 			<?php wp_nav_menu( array('menu' => 'primary') ); ?>
 		</nav>
+		-->
+	</div>
+
+	<div id="banner" class="main-banner container-fluid">
+		
+	</div>
+
+	<div id="wrapper" class="container">
 

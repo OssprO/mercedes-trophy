@@ -52,7 +52,7 @@ module.exports = function (grunt) {
         },
         files: { // Dictionary of files
           '../../static/css/style.css': '../src/scss/style.scss',
-          '../../static/css/ie.css': '../src/scss/ie.scss',
+          //'../../static/css/ie.css': '../src/scss/ie.scss',
         }
       },
       dist: { // Target
@@ -61,7 +61,7 @@ module.exports = function (grunt) {
         },
         files: { // Dictionary of files
           '../../static/css/style.css': '../src/scss/style.scss',
-          '../../static/css/ie.css': '../src/scss/ie.scss',
+          //'../../static/css/ie.css': '../src/scss/ie.scss',
         }
       }
     },
