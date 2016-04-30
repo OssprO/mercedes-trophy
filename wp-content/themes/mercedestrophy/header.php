@@ -121,8 +121,7 @@
 
 <body <?php body_class(); ?>>
 
-	<!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
-	<div id="wrapper" class="container">
+	<div class="container">
 		
 		<header id="header" role="banner">
 			<!--
@@ -205,11 +204,14 @@
 					        </a>
 				        </div>
 				        <div class="navbar-collapse collapse text-center" id="topmenu">
+				        	<?php wp_nav_menu( array('menu' => 'primary') ); ?>
+				        	<!--
 					        <ul class="nav">
 					            <li class="active col-xs-2"><a href="#">Inicio</a></li>
 					            <li class="col-xs-2"><a href="#s">Clubes 2016</a></li>
 					            <li class="col-xs-2"><a href="#section-bio">Galería</a></li>
 					        </ul>
+					        -->
 				        </div>  
 				    </div>
 			    </div>
@@ -223,9 +225,11 @@
 		-->
 	</div>
 
-	<div id="banner" class="main-banner container-fluid">
+	<div id="banner" class="container-fluid">
+		<div class="main-banner">
+			<img src="<?php echo get_template_directory_uri(); ?>/images/main-bg.jpg" alt=""/>
+		</div>
 		
 	</div>
 
-	<div id="wrapper" class="container">
 

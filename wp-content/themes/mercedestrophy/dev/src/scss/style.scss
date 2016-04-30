@@ -23,6 +23,35 @@ Style sheet for Mercedes Trophy
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 
+body {
+	//background: url('/images/main-bg.jpg');
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+	margin-top: 0px;
+
+	&.inverse {
+		color: $gray-darker;
+	}
+}
+
+.container, .container-fluid {
+	&.inverse {
+		background-color: $gray-darker;
+	}
+}
+
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+}
+
+.anotation {
+	color: $link-hover-color;
+}
+
 .logo {
 	padding: 8px 0px;
 }
@@ -47,6 +76,147 @@ Style sheet for Mercedes Trophy
 	}
 }
 
+#menu-main-menu {
+	@extend .nav;
+
+	.menu-item {
+		@extend .col-xs-2;
+	}
+
+	.current-menu-item {
+		a {
+			color: $link-hover-color;
+			background-color: transparent;
+			border-bottom: 1px solid $link-hover-color;
+		}
+	}
+}
+
 .navbar-mercedes {
 
+}
+
+#banner {
+	height: 540px;
+}
+
+.main-banner {
+	z-index: -10;
+	width: 100%;
+	position: absolute;
+	top: -250px;
+	left: 0;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.mt-seccion {
+	background-color: $gray-darker;
+	padding: 60px 0px;
+	min-height: 200px;
+}
+
+.mt-clubes {
+	padding: 60px 0px;
+}
+
+.mt-galeria {
+	background-color: #ffffff;
+}
+
+.mt-sponsors {
+	background-color: $gray-darker;
+	padding: 125px 0px;
+}
+
+.mt-disclaimer {
+	background-color: #000000;
+	padding: 60px 0px;
+}
+
+
+
+.mt-calendario {
+	margin-top: -30px;
+		
+	.mt-calendario-item {
+		background-color: #ffffff;
+		min-height: 200px;
+	}
+}
+
+.mt-calendario-inverse {
+	.mt-calendario-item {
+		background-color: $gray-darker;
+		min-height: 200px;
+
+		padding-bottom: 60px;
+	}
+}
+
+.mt-calendario-item-info {
+	padding-top: 60px;
+	padding-bottom: 20px;
+	.mt-calendario-item-info-detalle {
+		// margin-left: 115px;
+	}
+}
+
+.mt-calendario-item-foto {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+
+
+.mt-footer {
+	background-color: $gray-darker;
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+blockquote {
+	quotes: "\201C""\201D""\2018""\2019";
+
+	font-size: 26px;
+	font-family: $font-family-serif;
+	color: $gray-darker;
+
+	position: relative;
+
+	&:before {
+		content: open-quote;
+		font-size: 70px;
+		color: $link-hover-color;
+		
+		position: absolute;
+		top: -10px;
+		left: 10px;
+
+		font-family: $font-family-serif;
+	}
+
+	&:after {
+		content: close-quote;
+		font-size: 70px;
+		color: $link-hover-color;
+
+		position: absolute;
+		bottom: -35px;
+		right: 70px;
+
+		font-family: $font-family-serif;
+	}
+}
+
+.btn-mt {
+	width: 170px;
+	border: 2px solid #000000;
+	padding-top: 14px;
+	padding-bottom: 10px;
+	font-size: 16px;
 }
