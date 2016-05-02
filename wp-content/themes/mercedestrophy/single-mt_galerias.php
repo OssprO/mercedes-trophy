@@ -29,6 +29,15 @@
 				</div>
 			</div>
 		<?php endwhile; endif; ?>
+		<div class="mt-galeria">
+			<div class="row">
+				<div class="col-xs-14 col-md-12 col-md-offset-1 text-center">
+					<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Galerías' ) ) ); ?>" class="btn btn-md btn-default btn-mt">
+						Regresar
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 <?php get_footer(); ?>
