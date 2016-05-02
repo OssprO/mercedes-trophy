@@ -4,7 +4,8 @@
  * @subpackage Mercedes Trophy
  * @since Mercedes Trophy 1.0
  */
- get_header(); ?>
+   
+   get_header(); ?>
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -24,7 +25,7 @@
 
 			</div>
 			
-			<?php edit_post_link(__('Edit this entry','mercedestrophy'),'','.'); ?>
+			<?ph edit_post_link(__('Edit this entry','mercedestrophy'),'','.'); ?>
 			
 		</article>
 

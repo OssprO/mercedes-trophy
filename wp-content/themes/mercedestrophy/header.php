@@ -32,7 +32,7 @@
 	<meta name="title" content="<?php wp_title( '|', true, 'right' ); ?>">
 
 	<!--Google will often use this as its description of your page/site. Make it good.-->
-	<meta name="description" content="<?php bloginfo('description'); ?>" />
+	
 
 	<?php
 		if (true == of_get_option('meta_author'))
@@ -121,9 +121,9 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="container">
+	<div class="container-fluid">
 		
-		<header id="header" role="banner">
+		<header class="row" id="header" role="banner">
 			<!--
 			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			-->
@@ -188,18 +188,18 @@
 				</div>
 			</nav>
 			-->
-			
-			<nav class="navbar navbar-default" role="navigation">
-			    <div class="container-fluid">
+			<div class="container">
+				<nav class="navbar navbar-default" role="navigation">
+			    
 				    <div class="row">
-				        <div class="navbar-header col-xs-14 col-lg-6 col-xs-offset-1">
+				        <div class="navbar-header col-xs-14 col-sm-6 col-lg-6 col-sm-offset-1">
 					        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topmenu">
 					            <span class="sr-only">Toggle navigation</span>
-					            <span class="icon-bar">Inicio</span>
-					            <span class="icon-bar">Clubes 2016</span>
-					            <span class="icon-bar">Galerías</span>
+					            <span class="icon-bar"></span>
+					            <span class="icon-bar"></span>
+					            <span class="icon-bar"></span>
 					        </button>
-					        <a rel="home" class="logo" href="#">
+					        <a class="logo" href="http://www.mercedes-benz.com.mx" target="_blank">
 					            <img src="<?php echo get_template_directory_uri(); ?>/images/mercedes-main-logo_55.png" alt="Mercedes Benz" class="img-responsive logo">
 					        </a>
 				        </div>
@@ -214,8 +214,8 @@
 					        -->
 				        </div>  
 				    </div>
-			    </div>
-			</nav>
+				</nav>
+			</div>
 
 		</header>
 		<!--
@@ -225,9 +225,13 @@
 		-->
 	</div>
 
-	<div id="banner" class="container-fluid">
+	<div id="banner" class="container">
+		<img class="img-responsive hidden-xs hidden-sm" src="http://placehold.it/1060x550" alt="">
 		<div class="main-banner">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/main-bg.jpg" alt=""/>
+			<?php
+				echo do_shortcode('[smartslider3 slider=3]');
+			?>
+			<!--<img src="<?php echo get_template_directory_uri(); ?>/images/main-bg.jpg" alt=""/>-->
 		</div>
 		
 	</div>

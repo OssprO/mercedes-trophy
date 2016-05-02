@@ -6,30 +6,28 @@
  */
  get_header(); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			
-		<article class="post" id="post-<?php the_ID(); ?>">
-
-			<h2><?php the_title(); ?></h2>
-
-			<?php posted_on(); ?>
-
-			<div class="entry">
-
-				<?php the_content(); ?>
-
-				<?php wp_link_pages(array('before' => __('Pages: ','mercedestrophy'), 'next_or_number' => 'number')); ?>
-
+ 	<div id="wrapper" class="container">
+ 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<div class="mt-seccion">
+				<div class="row text-center">
+					<div class="col-xs-14 col-md-10 col-md-offset-2">
+						<h2><?php the_title(); ?></h2>
+						<p>___________</p>
+						<p class="anotation"><?php posted_on(); ?></p>
+						<p><?php the_excerpt(); ?></p>
+					</div>
+				</div>
 			</div>
-
-			<?php edit_post_link(__('Edit this entry','mercedestrophy'), '<p>', '</p>'); ?>
-
-		</article>
-		
-		<?php comments_template(); ?>
-
+			<div class="mt-galeria">
+				<div class="row text-center">
+					<div class="col-xs-14 col-md-12 col-md-offset-1">
+						<div class="mt-fotos-wrapper">
+							<?php the_content(); ?>
+						</div>
+					</div>
+				</div>
+			</div>
 		<?php endwhile; endif; ?>
-
-<?php get_sidebar(); ?>
+	</div>
 
 <?php get_footer(); ?>
